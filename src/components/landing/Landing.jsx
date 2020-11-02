@@ -5,14 +5,18 @@ import PumpkinIcon from '../../icons/Pumpkin.icon';
 const Landing = () => (
     <div className="container-landing-outer">
         <div className='container-landing-header'>
-            <h2>Trick || Treat</h2>
+            <h1>Trick || Treat</h1>
             <PumpkinIcon />
         </div>
         <div className='container-landing-options-container'>
-            <h6>I want to</h6>
+            <h3>I want to</h3>
             <div className='container-landing-options'>
-                <Link to='/distribute'>distribute treats</Link>
-                <Link to='/collect'>collect treats</Link>
+                <div className='container-landing-options-links'>
+                    <Link to='/distribute' className="landing-link">distribute treats</Link>
+                </div>
+                <div className='container-landing-options-links'>
+                    <Link to='/collect' className="landing-link">collect treats</Link>
+                </div>
             </div>
         </div>
     </div>
