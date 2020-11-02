@@ -12,10 +12,10 @@ const Landing = () => (
             <h3>I want to</h3>
             <div className='container-landing-options'>
                 <div className='container-landing-options-links'>
-                    <Link to='/distribute' className="landing-link">distribute treats</Link>
+                    <Link to='/distribute' className="landing-link">Give out treats</Link>
                 </div>
                 <div className='container-landing-options-links'>
-                    <Link to='/collect' className="landing-link">collect treats</Link>
+                    <Link to='/collect' className="landing-link">Collect treats</Link>
                 </div>
             </div>
         </div>
