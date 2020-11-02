@@ -1,0 +1,25 @@
+@import '../../Global.colors.scss';
+@import '../../Global.alignment.scss';
+.container-landing-outer{
+    width:400px;
+    height:400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    @include flexboxAlignCenter;
+    @include flexDirection(column);
+    background-color: $color-light-orange;
+
+    .container-landing-header{
+        @include flexboxAlignCenter;
+        @include flexDirection(column);
+    }
+    .container-landing-options-container{
+        @include flexboxAlignCenter;
+        @include flexDirection(column);
+        .container-landing-options{
+            @include flexboxAlignCenter;
+            @include flexDirection(row);
+            width: 100%;
+        }
+    }
+}
