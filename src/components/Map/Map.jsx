@@ -7,18 +7,19 @@ class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            lng: 5,
-            lat: 34,
-            zoom: 2
+            long: 1.1743,
+            lat: 52.3555,
+            zoom: 10
         };
     }
     componentDidMount() {
-        const map = new mapboxgl.Map({
+        new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [this.state.lng, this.state.lat],
+            center: [this.state.long, this.state.lat],
             zoom: this.state.zoom
         });
+        console.log(this.props);
     }
     render() {
         return (
