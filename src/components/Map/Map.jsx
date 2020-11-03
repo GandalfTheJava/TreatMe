@@ -7,9 +7,9 @@ class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            long: 1.1743,
-            lat: 52.3555,
-            zoom: 10
+            long: this.props.long,
+            lat: this.props.lat,
+            zoom: 15
         };
     }
     componentDidMount() {
@@ -19,7 +19,6 @@ class Map extends Component {
             center: [this.state.long, this.state.lat],
             zoom: this.state.zoom
         });
-        console.log(this.props);
     }
     render() {
         return (

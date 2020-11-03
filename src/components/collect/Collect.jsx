@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Collect.scss';
 import Map from '../Map/Map';
 
-let lat;
-let long;
+
 const Collect = () => {
+    const [lat, setLat] = useState();
+    const [long, setLong] = useState();
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(function (position) {
-            lat = position.coords.latitude
-            long = position.coords.longitude
+            setLat(position.coords.latitude);
+            setLong(position.coords.longitude);
         });
-    });
+    }, [long, lat]);
     return (
         <div className='container-map-outer' >
             <h1>Where art thou?</h1>
-            <div className='container-map' id='map'>
-                <Map lat={lat} long={long} />
+            <div className='container-map'>
+                {
+                    (lat && long) ? <Map lat={lat} long={long} /> : <h1> Map loading..</h1>
+                }
             </div>
         </div >
     )
