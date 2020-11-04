@@ -9,7 +9,7 @@ class Map extends Component {
         this.state = {
             long: this.props.long,
             lat: this.props.lat,
-            zoom: 15
+            zoom: 10
         };
     }
     componentDidMount() {
