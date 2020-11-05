@@ -4,12 +4,12 @@ import Map from '../Map/Map';
 
 
 const Collect = () => {
-    const [lat, setLat] = useState();
-    const [long, setLong] = useState();
+    const [lat, setLat] = useState(5);
+    const [long, setLong] = useState(34);
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(function (position) {
-            setLat(position.coords.latitude);
-            setLong(position.coords.longitude);
+            // setLat(position.coords.latitude);
+            // setLong(position.coords.longitude);
         });
     }, [long, lat]);
     return (
@@ -17,7 +17,7 @@ const Collect = () => {
             <h1>Where art thou?</h1>
             <div className='container-map'>
                 {
-                    (lat && long) ? <Map lat={lat} long={long} /> : <h1> Map loading..</h1>
+                    (lat && long) ? <Map lat={5} long={34} /> : <h1> Map loading..</h1>
                 }
             </div>
         </div >

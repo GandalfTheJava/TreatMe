@@ -7,8 +7,6 @@ class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            long: this.props.long,
-            lat: this.props.lat,
             zoom: 10
         };
     }
@@ -16,7 +14,7 @@ class Map extends Component {
         new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [this.state.long, this.state.lat],
+            center: [this.props.long, this.props.lat],
             zoom: this.state.zoom
         });
     }
