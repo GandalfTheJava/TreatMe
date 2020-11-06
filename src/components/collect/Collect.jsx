@@ -4,12 +4,12 @@ import Map from '../Map/Map';
 
 
 const Collect = () => {
-    const [lat, setLat] = useState(5);
-    const [long, setLong] = useState(34);
+    const [lat, setLat] = useState();
+    const [long, setLong] = useState();
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(function (position) {
-            // setLat(position.coords.latitude);
-            // setLong(position.coords.longitude);
+            setLat(position.coords.latitude);
+            setLong(position.coords.longitude);
         });
     }, [long, lat]);
     return (
